@@ -9,6 +9,9 @@ const mongoose = require('mongoose');
 const cookieParser = require("cookie-parser");
 const { type } = require('os');
 const user = require('./models/user');
+const crypto = require('crypto');
+const multerconfig = require("./config/multerconfig");
+
 
 app.set("view engine", "ejs");
 app.use(express.json())
