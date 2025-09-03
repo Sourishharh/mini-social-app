@@ -11,17 +11,29 @@ const { type } = require('os');
 const user = require('./models/user');
 const crypto = require('crypto');
 const multerconfig = require("./config/multerconfig");
+const upload = require('./config/multerconfig');
 
 
 app.set("view engine", "ejs");
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, "public")))
+app.use(express.static(path.join(__dirname, "public")));
 app.use(cookieParser());
 
 
 app.get('/', (req, res) => {
     res.render('index')
+})
+
+app.post('/upload',isloggedin,upload.single("image"), async(req, res) => {
+     let user = await userModel.findOne({email:req.user.email});
+     user.profilepic = req.file.filename;
+     await user.save(); 
+     res.redirect("/profile");
+})
+
+app.post('/profile/upload', (req, res) => {
+    res.render('profileupload')
 })
 
 app.get('/login', (req, res) => {
@@ -127,5 +139,7 @@ function isloggedin(req, res, next) {
      next();
  }
 }
+
+
 
 app.listen(5000);
