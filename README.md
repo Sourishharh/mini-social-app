@@ -11,7 +11,7 @@ This project is designed as a learning project to understand backend development
 
 * 🔐 User Authentication (Register/Login with hashed passwords & JWT)
 * 👤 User Profiles
-* 📝 Create, Read, Update, Delete Posts
+* 📝 Create, Read, Update Posts
 * ❤️ Like & Comment System (basic interactions)
 * 🍪 Cookie-based Authentication with JWT
 * 📸 File Uploads with Multer (profile pics/posts)
@@ -59,24 +59,16 @@ mini-social-app/
    npm install
    ```
 
-3. Create a `.env` file in the root directory:
-
-   ```env
-   MONGO_URI=your_mongo_connection_string
-   JWT_SECRET=your_secret_key
-   PORT=3000
-   ```
-
-4. Start the server:
+3. Start the server:
 
    ```bash
    npm start
    ```
 
-5. Open in browser:
+4. Open in browser:
 
    ```
-   http://localhost:3000
+   http://localhost:5000
    ```
 
 ---
