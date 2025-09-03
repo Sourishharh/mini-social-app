@@ -12,7 +12,7 @@ This project is designed as a learning project to understand backend development
 * 🔐 User Authentication (Register/Login with hashed passwords & JWT)
 * 👤 User Profiles
 * 📝 Create, Read, Update Posts
-* ❤️ Like & Comment System (basic interactions)
+* ❤️ Like & Edit System (basic interactions)
 * 🍪 Cookie-based Authentication with JWT
 * 📸 File Uploads with Multer (profile pics/posts)
 * 🌐 EJS for templating
